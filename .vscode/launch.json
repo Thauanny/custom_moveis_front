@@ -7,19 +7,9 @@
         {
             "name": "customoveis",
             "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "customoveis (profile mode)",
-            "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "program":  "app/main.dart"
         },
-        {
-            "name": "customoveis (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        }
+    
     ]
 }
