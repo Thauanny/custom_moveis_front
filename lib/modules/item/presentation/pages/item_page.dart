@@ -26,14 +26,9 @@ Map mapIconTest = {
   "Largura4": Icons.open_in_full_rounded,
 };
 
-class ItemPage extends StatefulWidget {
+class ItemPage extends StatelessWidget {
   const ItemPage({super.key});
 
-  @override
-  State<ItemPage> createState() => _ItemPageState();
-}
-
-class _ItemPageState extends State<ItemPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
