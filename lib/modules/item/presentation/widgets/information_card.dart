@@ -1,3 +1,4 @@
+import 'package:customoveis/shared/colors.dart';
 import 'package:flutter/material.dart';
 
 class InformationCard extends StatelessWidget {
@@ -14,6 +15,7 @@ class InformationCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(80),
       ),
       elevation: 10,
+      color: primaryDetailsColor,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,

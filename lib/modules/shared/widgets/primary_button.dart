@@ -13,30 +13,33 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: primaryColor,
-        padding: const EdgeInsets.symmetric(
-          horizontal: small_12,
-          vertical: small_12,
-        ),
-        textStyle: const TextStyle(
-          fontSize: medium_24,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      onPressed: onPressed,
-      child: Row(
-        children: [
-          const SizedBox(
-            width: 10,
+    return Expanded(
+      child: ElevatedButton.icon(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: primaryColor,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.zero,
+            side: BorderSide(color: primaryColor ?? Colors.amber),
           ),
-          Text(text),
-          const Icon(
-            Icons.navigate_next_outlined,
-            size: mendium_40,
-          )
-        ],
+          padding: const EdgeInsets.symmetric(
+            horizontal: small_12,
+            vertical: small_12,
+          ),
+        ),
+        icon: Icon(
+          Icons.navigate_next_outlined,
+          size: mendium_40,
+          color: primaryDetailsColor,
+        ),
+        label: Text(
+          text,
+          style: TextStyle(
+            fontSize: medium_24,
+            color: primaryDetailsColor,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        onPressed: onPressed,
       ),
     );
   }

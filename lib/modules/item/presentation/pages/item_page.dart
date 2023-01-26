@@ -1,7 +1,5 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:customoveis/modules/item/presentation/widgets/image_viewer_3D.dart';
 import 'package:customoveis/modules/shared/widgets/primary_button.dart';
-import 'package:customoveis/shared/colors.dart';
 import 'package:customoveis/shared/sizes.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +17,8 @@ Map mapTest = {
 };
 Map mapIconTest = {
   "Color": Icons.color_lens,
-  "Altura": Icons.height,
-  "Largura": Icons.open_in_full_rounded,
+  "Altura": Icons.swap_vert,
+  "Largura": Icons.swap_horiz,
   "Largura2": Icons.open_in_full_rounded,
   "Largura3": Icons.open_in_full_rounded,
   "Largura4": Icons.open_in_full_rounded,
@@ -48,9 +46,12 @@ class ItemPage extends StatelessWidget {
                     children: [
                       Padding(
                         padding: EdgeInsets.only(
-                            top: MediaQuery.of(context).size.height * 0.35),
+                          top: MediaQuery.of(context).size.height * 0.35,
+                        ),
                         child: DiagonalClipper(
-                            icons: mapIconTest, information: mapTest),
+                          icons: mapIconTest,
+                          information: mapTest,
+                        ),
                       ),
                       const ImageViewer3D(
                         src: r'assets/cadeira.glb',
@@ -68,11 +69,14 @@ class ItemPage extends StatelessWidget {
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        PriceLabel(
+                      children: [
+                        const PriceLabel(
                           text: 'Valor: 45,00',
                         ),
-                        PrimaryButton(text: 'Custumizar'),
+                        PrimaryButton(
+                          text: 'Costumizar',
+                          onPressed: () {},
+                        ),
                       ],
                     ),
                   ),
