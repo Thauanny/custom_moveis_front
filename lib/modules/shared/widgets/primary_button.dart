@@ -1,5 +1,5 @@
-import 'package:customoveis/shared/colors.dart';
-import 'package:customoveis/shared/sizes.dart';
+import 'package:customoveis/shared/config/colors.dart';
+import 'package:customoveis/shared/config/sizes.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {

@@ -1,3 +1,4 @@
+
 const double small_2 = 2;
 const double small_4 = 4;
 const double small_8 = 8;

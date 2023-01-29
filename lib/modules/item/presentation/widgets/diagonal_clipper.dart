@@ -1,8 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:customoveis/modules/item/presentation/widgets/information_card.dart';
-import 'package:customoveis/shared/box_shadow.dart';
-import 'package:customoveis/shared/colors.dart';
-import 'package:customoveis/shared/sizes.dart';
+import 'package:customoveis/shared/widget/box_shadow.dart';
+import 'package:customoveis/shared/config/colors.dart';
+import 'package:customoveis/shared/config/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:shadow_clip/shadow_clip.dart';

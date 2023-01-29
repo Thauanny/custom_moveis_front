@@ -1,3 +1,5 @@
+import 'package:customoveis/modules/customization/customization_module.dart';
+import 'package:customoveis/modules/home/home_module.dart';
 import 'package:customoveis/modules/item/item_module.dart';
 import 'package:customoveis/modules/item/presentation/pages/item_page.dart';
 import 'package:customoveis/modules/login/login_module.dart';
@@ -16,6 +18,14 @@ class AppModule extends Module {
         ModuleRoute(
           '/itemPage',
           module: ItemModule(),
+        ),
+        ModuleRoute(
+          '/home',
+          module: HomeModule(),
+        ),
+        ModuleRoute(
+          '/customization',
+          module: CustomizationModule(),
         ),
       ];
 }

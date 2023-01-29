@@ -1,4 +1,4 @@
-import 'package:customoveis/shared/colors.dart';
+import 'package:customoveis/shared/config/colors.dart';
 import 'package:flutter/material.dart';
 
 class InformationCard extends StatelessWidget {

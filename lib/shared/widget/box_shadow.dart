@@ -1,6 +1,7 @@
-import 'package:customoveis/shared/colors.dart';
-import 'package:customoveis/shared/sizes.dart';
+import 'package:customoveis/shared/config/colors.dart';
 import 'package:flutter/material.dart';
+
+import '../config/sizes.dart';
 
 const BoxShadow primaryBoxShadow = BoxShadow(
   color: Colors.white,

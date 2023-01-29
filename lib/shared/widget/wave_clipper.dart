@@ -1,14 +1,21 @@
+import 'package:customoveis/shared/widget/text_clippet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
-import 'package:customoveis/shared/colors.dart';
-import 'package:customoveis/shared/sizes.dart';
+import 'package:customoveis/shared/config/colors.dart';
+import 'package:customoveis/shared/config/sizes.dart';
 
 class WaveClipper extends StatelessWidget {
   final String title;
+  final bool? nextIcon;
+  final double height;
+  final bool? backIcon;
   const WaveClipper({
     Key? key,
     required this.title,
+    required this.height,
+    this.nextIcon,
+    this.backIcon,
   }) : super(key: key);
 
   @override
@@ -17,28 +24,17 @@ class WaveClipper extends StatelessWidget {
       clipper: WaveClipperTwo(),
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height * 0.3,
+        height: height,
         color: primaryColor,
         child: Padding(
           padding: EdgeInsets.only(
             left: medium_20,
             bottom: MediaQuery.of(context).size.height * 0.16,
           ),
-          child: Row(
-            children: [
-              Icon(
-                Icons.arrow_back_ios,
-                color: primaryDetailsColor,
-              ),
-              Text(
-                title,
-                style: TextStyle(
-                  color: primaryDetailsColor,
-                  fontSize: medium_36,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
+          child: TextClipper(
+            title: title,
+            nextIcon: nextIcon,
+            backIcon: backIcon,
           ),
         ),
       ),
